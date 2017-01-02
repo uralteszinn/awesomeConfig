@@ -59,8 +59,8 @@ awful.rules.rules = {
     callback   = function(c)
                    awful.placement.centered(c)
                  end },
-  ------------------------------------------------------------
-  { rule       = { class = "URxvt" },
+  -----------------------------------------------------------
+  { rule_any   = { class = {"URxvt", "XTerm"} },
     callback   = function(c) 
                    c:tags({tags[mouse.screen][2]}) 
                    awful.tag.viewonly(tags[mouse.screen][2])
@@ -120,6 +120,13 @@ awful.rules.rules = {
                               "libreoffice-impress" } },
     callback   = function(c) 
                    c:tags({tags[mouse.screen][9]}) 
+                 end },
+  ------------------------------------------------------------   
+  { rule_any   = { class = { "jetbrains-idea-ce", "Eclipse" } },
+    properties = { floating = false, },
+    callback   = function(c) 
+                   c:tags({tags[mouse.screen][3]}) 
+                   awful.tag.viewonly(tags[mouse.screen][3])
                  end },
   ------------------------------------------------------------   
   { rule       = { class = "Kmymoney" },
