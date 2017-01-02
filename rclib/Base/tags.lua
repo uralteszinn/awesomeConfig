@@ -1,7 +1,7 @@
 tags = {}
 for s = 1, screen.count() do
   tags[s] = awful.tag(
-    { "www" , "term" , "vim", "pdf", "files", "music", "movie", "play", "other" }, s, 
+    { "www" , "term" , "coding", "pdf", "files", "music", "movie", "play", "other" }, s, 
     {layouts.default, layouts.default, layouts.max, layouts.max, layouts.max, layouts.max, layouts.max, layouts.max, layouts.max }
   )
 end
